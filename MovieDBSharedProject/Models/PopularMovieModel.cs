@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MovieDB.Android
+namespace MovieDBSharedProject
 {
     class PopularMovieModel
     {
