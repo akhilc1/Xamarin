@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>3bd4dfd2-21f1-4fef-8f11-9359da20aca4</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MovieDBSharedProject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MovieModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PopularMovieModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MovieDBRestClient.cs" />
+  </ItemGroup>
+</Project>
