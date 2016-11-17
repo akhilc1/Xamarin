@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace MovieDB.iOS
 {
-    public partial class ViewController : UIViewController
-    {
-        public ViewController (IntPtr handle) : base (handle)
-        {
-        }
+	public partial class ViewController : UIViewController
+	{
+		Task<PopularMovieModel> modelData;
+		public ViewController(IntPtr handle) : base(handle)
+		{
+		}
 
 		public override void ViewDidLoad()
 		{
@@ -20,8 +21,13 @@ namespace MovieDB.iOS
 		public override void ViewWillAppear(bool animated)
 		{
 			base.ViewWillAppear(animated);
-			MovieDBRestClient restClient = new MovieDBRestClient();
-			Task<PopularMovieModel> model = restClient.GetPopularMovies(1);
+
 		}
-    }
+
+		public void callMovieApi()
+		{
+			MovieDBRestClient restClient = new MovieDBRestClient();
+			modelData = restClient.GetPopularMovies(1);
+		}
+	}
 }
